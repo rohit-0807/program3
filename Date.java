@@ -12,9 +12,25 @@ class Person {
     }
 }
 
+class Employee extends Person {
+    int empId;
+    Double salary;
+
+    Employee(String name, int age, int empId, Double salary) {
+        super(name, age);
+        this.empId = empId;
+        this.salary = salary;
+    }
+
+    void show1() {
+        super.show1();
+        System.out.println("Employee ID: " + empId + "\salary: " + salary);
+    }
+}
+
 public class Date {
     public static void main(String[] args) {
-        Person p = new Person("Rohit", 21);
-        p.show1();
+        Employee e = new Employee("Rohit", 21, 101, 50000.0);
+        e.show1();
     }
 }
